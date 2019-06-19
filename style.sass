@@ -1,0 +1,40 @@
+*
+  margin: 0
+  padding: 0
+
+body
+  font:
+    family: "Noto Sans JP", sans-serif
+    size: 100%
+    weight: 300
+
+  margin: 32px
+
+@for $i from 1 through 6
+  h#{$i}
+    font:
+      size: (6 - $i) * 25% + 50%
+      weight: 100
+
+h2
+  border-bottom: 1px solid #ccc
+
+a
+  &:link
+    color: #00f
+
+  &:visited
+    color: #90c
+
+  &:hover
+    color: #09f
+
+  &:active
+    color: #f00
+
+  &[href^="https://github.com"]::after
+    content: " (GitHubへのリンク)"
+
+ul,
+ol
+  margin-left: 8px
